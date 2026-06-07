@@ -109,7 +109,7 @@ export function RevenueChart({
             <CartesianGrid strokeDasharray="0" stroke="#e5e7eb" vertical={false} />
             <XAxis dataKey="label" {...axisProps} />
             <YAxis domain={[0, yMax]} ticks={ticks} width={48} {...axisProps} />
-            <Tooltip formatter={(v: number) => euroFmt(v)} />
+            <Tooltip formatter={(v) => typeof v === "number" ? euroFmt(v) : ""} />
             <Legend
               verticalAlign="top"
               align="right"
@@ -141,7 +141,7 @@ export function RevenueChart({
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" vertical={false} />
             <XAxis dataKey="label" {...axisProps} />
             <YAxis domain={[0, yMax]} ticks={ticks} width={48} {...axisProps} />
-            <Tooltip formatter={(v: number) => euroFmt(v)} />
+            <Tooltip formatter={(v) => typeof v === "number" ? euroFmt(v) : ""} />
             <Legend
               verticalAlign="top"
               align="right"
@@ -173,7 +173,7 @@ export function RevenueChart({
             <CartesianGrid strokeDasharray="0" stroke="#e5e7eb" vertical={false} />
             <XAxis dataKey="label" {...axisProps} />
             <YAxis domain={[0, yMax]} ticks={ticks} width={48} {...axisProps} />
-            <Tooltip formatter={(v: number) => euroFmt(v)} />
+            <Tooltip formatter={(v) => typeof v === "number" ? euroFmt(v) : ""} />
             <Legend
               verticalAlign="top"
               align="right"
